@@ -13,7 +13,7 @@ A simple, client-side Expense Tracker built with **HTML**, **CSS**, and **vanill
 
 ## Project Structure
 
-```
+```text
 expense-tracker/
 ├── index.html        # UI markup
 ├── styles.css        # Styling
