@@ -1,0 +1,16 @@
+{
+  "name": "expense-tracker",
+  "version": "1.0.0",
+  "description": "Expense Tracker with Kenyan Shillings (KSh) and Jest tests",
+  "main": "script.js",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "keywords": ["expense", "tracker", "jest", "testing"],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
