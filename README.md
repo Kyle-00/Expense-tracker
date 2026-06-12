@@ -1,6 +1,6 @@
 # Expense Tracker
 
-A simple, client-side Expense Tracker built with **HTML**, **CSS**, and **vanilla JavaScript**. It demonstrates object-oriented programming, functional array methods, destructuring, the spread/rest operators, localStorage persistence, and unit testing with Jest.
+A clean, modern expense tracking web application that helps you record, filter, and visualize your daily spending – all stored locally in your browser.
 
 ## Features
 
