@@ -1,0 +1,244 @@
+:root {
+  --color-bg: #f4f6f9;
+  --color-card: #ffffff;
+  --color-primary: #4361ee;
+  --color-primary-dark: #3245c2;
+  --color-danger: #e63946;
+  --color-text: #2b2d42;
+  --color-muted: #8d99ae;
+  --color-border: #e0e4ea;
+  --radius: 10px;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.5;
+}
+
+.app {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px 16px 60px;
+}
+
+.app__header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.app__header h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: var(--color-primary-dark);
+}
+
+.app__subtitle {
+  margin: 4px 0 0;
+  color: var(--color-muted);
+}
+
+.card {
+  background: var(--color-card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.card h2 {
+  margin-top: 0;
+  font-size: 1.2rem;
+}
+
+.expense-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+@media (min-width: 560px) {
+  .expense-form {
+    grid-template-columns: 2fr 1fr 1fr;
+    align-items: end;
+  }
+
+  .expense-form .btn {
+    grid-column: 1 / -1;
+  }
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: var(--color-muted);
+}
+
+.form-group input,
+.form-group select {
+  padding: 10px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  font-size: 1rem;
+  background-color: #fff;
+  color: var(--color-text);
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.15);
+}
+
+.btn {
+  cursor: pointer;
+  border: none;
+  border-radius: var(--radius);
+  padding: 12px 18px;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background-color 0.15s ease, transform 0.05s ease;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn--primary {
+  background-color: var(--color-primary);
+  color: #fff;
+}
+
+.btn--primary:hover {
+  background-color: var(--color-primary-dark);
+}
+
+.btn--danger {
+  background-color: transparent;
+  color: var(--color-danger);
+  border: 1px solid var(--color-danger);
+  padding: 6px 12px;
+  font-size: 0.85rem;
+}
+
+.btn--danger:hover {
+  background-color: var(--color-danger);
+  color: #fff;
+}
+
+.card--summary {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.card--summary .form-group {
+  flex: 1;
+  min-width: 180px;
+}
+
+.total-display {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.total-display__label {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+}
+
+.total-display__amount {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+}
+
+.expense-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.expense-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.expense-item:last-child {
+  border-bottom: none;
+}
+
+.expense-item__details {
+  display: flex;
+  flex-direction: column;
+}
+
+.expense-item__description {
+  font-weight: 600;
+}
+
+.expense-item__meta {
+  font-size: 0.8rem;
+  color: var(--color-muted);
+}
+
+.expense-item__category {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background-color: #eef1ff;
+  color: var(--color-primary-dark);
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-right: 6px;
+}
+
+.expense-item__right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.expense-item__amount {
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.empty-message {
+  color: var(--color-muted);
+  text-align: center;
+  padding: 16px 0;
+  margin: 0;
+}
+
+.expense-list:not(:empty) + .empty-message {
+  display: none;
+}
+
+.app__footer {
+  text-align: center;
+  color: var(--color-muted);
+  font-size: 0.8rem;
+  margin-top: 24px;
+}
