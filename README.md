@@ -28,7 +28,7 @@ expense-tracker/
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/<your-username>/expense-tracker.git
+git clone https://github.com/Kyle-00/Expense-tracker
 cd expense-tracker
 ```
 
@@ -91,7 +91,7 @@ Manages the collection of expenses:
 1. Push this project to a GitHub repository.
 2. In the repository, go to **Settings → Pages**.
 3. Under **Source**, select the branch (e.g. `main`) and the root folder (`/`).
-4. Save — GitHub will provide a URL such as `https://<your-username>.github.io/expense-tracker/`.
+4. Save — GitHub will provide a URL such as `https://kyle-00.github.io/Expense-tracker/`
 5. Visit the URL to use your deployed Expense Tracker.
 
 ## License
