@@ -1,3 +1,16 @@
+// Mock localStorage for Node environment
+const localStorageMock = (() => {
+  let store = {};
+  return {
+    getItem: (key) => store[key] || null,
+    setItem: (key, value) => { store[key] = value.toString(); },
+    removeItem: (key) => { delete store[key]; },
+    clear: () => { store = {}; },
+  };
+})();
+
+Object.defineProperty(global, 'localStorage', { value: localStorageMock });
+
 const { Expense, ExpenseTracker } = require("./script");
 
 describe("Expense", () => {
@@ -63,7 +76,6 @@ describe("ExpenseTracker - adding expenses", () => {
 
     tracker.addExpense(new Expense("New", 10, "Food", 2));
 
-    // original array passed in should remain unchanged
     expect(initial).toHaveLength(1);
     expect(tracker.getAllExpenses()).toHaveLength(2);
   });
