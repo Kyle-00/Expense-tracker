@@ -232,10 +232,6 @@ body {
   margin: 0;
 }
 
-.expense-list:not(:empty) + .empty-message {
-  display: none;
-}
-
 .app__footer {
   text-align: center;
   color: var(--color-muted);
